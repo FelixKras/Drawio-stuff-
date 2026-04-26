@@ -1,0 +1,248 @@
+<mxfile host="Claude" agent="Claude Code" version="29.6.1">
+  <diagram name="DFD Level 1" id="dfd-l1">
+    <mxGraphModel dx="1800" dy="1300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0" background="#0D1B2A">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="label-1" value="&lt;b&gt;Agam Brakim - Data Flow Diagram (Level 1)&lt;/b&gt;&lt;br&gt;תרשים זרימת נתונים - אגם ברקים" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontStyle=0;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="800" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- EXTERNAL ENTITIES (Rounded Rectangles, Dark Gray) -->
+        <!-- ============================================================ -->
+
+        <!-- E1: SUT Network -->
+        <mxCell id="node-e1" value="&lt;b&gt;E1&lt;/b&gt;&lt;br&gt;&lt;b&gt;SUT Network&lt;/b&gt;&lt;br&gt;המערכת הנבדקת" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=3;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- E2: Aluma -->
+        <mxCell id="node-e2" value="&lt;b&gt;E2&lt;/b&gt;&lt;br&gt;&lt;b&gt;אלומה (Aluma)&lt;/b&gt;&lt;br&gt;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=3;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="250" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- E3: Nadan -->
+        <mxCell id="node-e3" value="&lt;b&gt;E3&lt;/b&gt;&lt;br&gt;&lt;b&gt;נדן (Nadan)&lt;/b&gt;&lt;br&gt;EDR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=3;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="580" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- PROCESSES (Rounded, Teal/Blue circles/ovals) -->
+        <!-- ============================================================ -->
+
+        <!-- P1: Gigamon HC1 -->
+        <mxCell id="node-p1" value="&lt;b&gt;1.0&lt;/b&gt;&lt;br&gt;&lt;b&gt;Gigamon HC1&lt;/b&gt;&lt;br&gt;סינון וטיוב&lt;br&gt;&lt;i&gt;Filter, Dedup, Tag&lt;/i&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="280" width="220" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- P2: Arkime Capture -->
+        <mxCell id="node-p2" value="&lt;b&gt;2.0&lt;/b&gt;&lt;br&gt;&lt;b&gt;Arkime Capture&lt;/b&gt;&lt;br&gt;לכידה ואינדוקס&lt;br&gt;&lt;i&gt;PCAP + SPI Metadata&lt;/i&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="280" width="230" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- P3: Arkime Viewer -->
+        <mxCell id="node-p3" value="&lt;b&gt;3.0&lt;/b&gt;&lt;br&gt;&lt;b&gt;Arkime Viewer&lt;/b&gt;&lt;br&gt;תחקור ויזואלי&lt;br&gt;&lt;i&gt;Visual Investigation&lt;/i&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="280" width="220" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- DATA STORES (Open-ended rectangles, Navy with accent) -->
+        <!-- ============================================================ -->
+
+        <!-- D1: NetApp PCAP Storage -->
+        <mxCell id="node-d1" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#1E2761;strokeColor=#00A896;strokeWidth=2;top=0;bottom=0;right=0;left=1;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="540" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label-d1" value="&lt;b&gt;D1&lt;/b&gt; | NetApp PCAP Storage&lt;br&gt;~22.2TB, 14-day retention" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontStyle=0;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="545" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- D2: Elasticsearch -->
+        <mxCell id="node-d2" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#1E2761;strokeColor=#00A896;strokeWidth=2;top=0;bottom=0;right=0;left=1;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="660" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label-d2" value="&lt;b&gt;D2&lt;/b&gt; | Elasticsearch&lt;br&gt;מטא-דאטה + אירועים" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontStyle=0;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="665" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- D3: PostgreSQL -->
+        <mxCell id="node-d3" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#1E2761;strokeColor=#00A896;strokeWidth=2;top=0;bottom=0;right=0;left=1;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="780" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label-d3" value="&lt;b&gt;D3&lt;/b&gt; | PostgreSQL&lt;br&gt;הגדרות, RBAC, Audit" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontStyle=0;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="785" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- D4: Datalake/NFS -->
+        <mxCell id="node-d4" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#1E2761;strokeColor=#CE93D8;strokeWidth=2;top=0;bottom=0;right=0;left=1;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="660" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label-d4" value="&lt;b&gt;D4&lt;/b&gt; | Datalake / NFS&lt;br&gt;ארטיפקטים, Golden Images" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=13;fontStyle=0;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="665" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- DATA FLOW ARROWS (layered above shapes) -->
+        <!-- ============================================================ -->
+
+        <!-- F1: SUT -> P1 (Passive TAP) -->
+        <mxCell id="edge-f1" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F1&lt;/b&gt; Raw Traffic&lt;br&gt;(Passive TAP)&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#B0BEC5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-e1" target="node-p1">
+          <mxGeometry x="-0.05" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F2: P1 -> P2 (Filtered Packets) -->
+        <mxCell id="edge-f2" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F2&lt;/b&gt; Filtered &amp;amp;&lt;br&gt;Tagged Packets&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#B0BEC5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p1" target="node-p2">
+          <mxGeometry x="-0.05" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F3: P2 -> D1 (Store PCAP) -->
+        <mxCell id="edge-f3" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F3&lt;/b&gt; Write PCAP Files&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B0BEC5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p2" target="node-d1">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F4: P2 -> D2 (Index SPI Metadata) -->
+        <mxCell id="edge-f4" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F4&lt;/b&gt; Index SPI&lt;br&gt;Metadata&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B0BEC5;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p2" target="node-d2">
+          <mxGeometry x="0.1" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F5: P2 -> P3 (Session Info) -->
+        <mxCell id="edge-f5" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F5&lt;/b&gt; Session Data&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#B0BEC5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p2" target="node-p3">
+          <mxGeometry x="-0.05" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F6: P3 -> D2 (Query Metadata) -->
+        <mxCell id="edge-f6" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F6&lt;/b&gt; Query&lt;br&gt;Metadata&lt;/font&gt;" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B0BEC5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p3" target="node-d2">
+          <mxGeometry x="0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F7: P3 -> D1 (Retrieve PCAP) -->
+        <mxCell id="edge-f7" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F7&lt;/b&gt; Retrieve&lt;br&gt;PCAP&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B0BEC5;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p3" target="node-d1">
+          <mxGeometry x="0.2" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F8: P3 -> D3 (Auth & Config) -->
+        <mxCell id="edge-f8" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F8&lt;/b&gt; Auth &amp;amp; Config&lt;/font&gt;" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B0BEC5;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p3" target="node-d3">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F9: P3 -> E2 (REST API Results) -->
+        <mxCell id="edge-f9" value="&lt;font color=&quot;#FFAB91&quot;&gt;&lt;b&gt;F9&lt;/b&gt; REST API&lt;br&gt;Query Results&lt;/font&gt;" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF8A65;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#FFAB91;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p3" target="node-e2">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F10: D4 -> E3 (NFS Artifacts to Nadan) -->
+        <mxCell id="edge-f10" value="&lt;font color=&quot;#E1BEE7&quot;&gt;&lt;b&gt;F10&lt;/b&gt; NFS Mount&lt;br&gt;Artifacts&lt;/font&gt;" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CE93D8;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#E1BEE7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-d4" target="node-e3">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F11: D4 -> E2 (NFS Artifacts to Aluma) -->
+        <mxCell id="edge-f11" value="&lt;font color=&quot;#E1BEE7&quot;&gt;&lt;b&gt;F11&lt;/b&gt; NFS Mount&lt;br&gt;(Datalake)&lt;/font&gt;" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CE93D8;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#E1BEE7;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-d4" target="node-e2">
+          <mxGeometry x="-0.2" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- F12: P2 -> D4 (Export Artifacts) -->
+        <mxCell id="edge-f12" value="&lt;font color=&quot;#B0BEC5&quot;&gt;&lt;b&gt;F12&lt;/b&gt; Export&lt;br&gt;Artifacts&lt;/font&gt;" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B0BEC5;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-p2" target="node-d4">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LEGEND -->
+        <!-- ============================================================ -->
+        <mxCell id="node-leg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0D1B2A;strokeColor=#546E7A;strokeWidth=1;arcSize=8;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="60" y="880" width="540" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="label-leg" value="&lt;b&gt;Legend / מקרא - DFD Notation&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#ECEFF1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="890" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- External Entity sample -->
+        <mxCell id="leg-e" value="External Entity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;fontFamily=Arial;fontSize=11;fontColor=#ECEFF1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="930" width="130" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-et" value="ישות חיצונית (External Entity)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="240" y="930" width="300" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Process sample -->
+        <mxCell id="leg-p" value="Process" style="ellipse;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=11;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="90" y="975" width="130" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-pt" value="תהליך (Process)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="240" y="980" width="300" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Data Store sample -->
+        <mxCell id="leg-d" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#1E2761;strokeColor=#00A896;strokeWidth=2;top=0;bottom=0;right=0;left=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1035" width="130" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-dl" value="Data Store" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=11;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="92" y="1035" width="126" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-dt" value="מאגר נתונים (Data Store)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1035" width="300" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Flow samples -->
+        <mxCell id="leg-f1" value="" style="endArrow=classic;html=1;strokeColor=#00A896;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="1098" as="sourcePoint" />
+            <mxPoint x="220" y="1098" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-f1t" value="Data Flow (זרימת נתונים)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1082" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-f2" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CE93D8;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="1128" as="sourcePoint" />
+            <mxPoint x="220" y="1128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-f2t" value="NFS/Shared Storage (אחסון משותף)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1112" width="300" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- DATA DICTIONARY (right side) -->
+        <!-- ============================================================ -->
+        <mxCell id="node-dd" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0D1B2A;strokeColor=#546E7A;strokeWidth=1;arcSize=6;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="660" y="880" width="860" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="label-dd" value="&lt;b&gt;Data Dictionary / מילון נתונים&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=15;fontStyle=0;fontColor=#ECEFF1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="890" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dd-table" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;border-collapse:collapse;font-size:12px;color:#B0BEC5;border-color:#546E7A;&quot;&gt;&#xa;&lt;tr style=&quot;background:#1E2761;color:#ECEFF1;font-weight:bold;&quot;&gt;&lt;td&gt;ID&lt;/td&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Type&lt;/td&gt;&lt;td&gt;Description&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;E1&lt;/td&gt;&lt;td&gt;SUT Network&lt;/td&gt;&lt;td&gt;External&lt;/td&gt;&lt;td&gt;System Under Test - monitored network segments&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;E2&lt;/td&gt;&lt;td&gt;Aluma (Manager)&lt;/td&gt;&lt;td&gt;External&lt;/td&gt;&lt;td&gt;Central management, queries via REST API&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;E3&lt;/td&gt;&lt;td&gt;Nadan (EDR)&lt;/td&gt;&lt;td&gt;External&lt;/td&gt;&lt;td&gt;Endpoint detection, reads NFS artifacts&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;1.0&lt;/td&gt;&lt;td&gt;Gigamon HC1&lt;/td&gt;&lt;td&gt;Process&lt;/td&gt;&lt;td&gt;Dedup, filter, VLAN-tag raw traffic&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;2.0&lt;/td&gt;&lt;td&gt;Arkime Capture&lt;/td&gt;&lt;td&gt;Process&lt;/td&gt;&lt;td&gt;Full-packet capture + SPI metadata indexing&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;3.0&lt;/td&gt;&lt;td&gt;Arkime Viewer&lt;/td&gt;&lt;td&gt;Process&lt;/td&gt;&lt;td&gt;Visual investigation, session drill-down, PCAP export&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;D1&lt;/td&gt;&lt;td&gt;NetApp PCAP&lt;/td&gt;&lt;td&gt;Store&lt;/td&gt;&lt;td&gt;~22.2TB, 14-day rolling retention of raw PCAP&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;D2&lt;/td&gt;&lt;td&gt;Elasticsearch&lt;/td&gt;&lt;td&gt;Store&lt;/td&gt;&lt;td&gt;Session metadata, events, SPI index&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;D3&lt;/td&gt;&lt;td&gt;PostgreSQL&lt;/td&gt;&lt;td&gt;Store&lt;/td&gt;&lt;td&gt;Configuration, RBAC policies, audit log&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;tr&gt;&lt;td&gt;D4&lt;/td&gt;&lt;td&gt;Datalake/NFS&lt;/td&gt;&lt;td&gt;Store&lt;/td&gt;&lt;td&gt;Shared artifacts, golden images (NFS mount)&lt;/td&gt;&lt;/tr&gt;&#xa;&lt;/table&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="670" y="925" width="840" height="200" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

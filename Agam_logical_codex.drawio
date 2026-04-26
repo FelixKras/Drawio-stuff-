@@ -1,0 +1,242 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1" pages="2">
+  <diagram name="Agam Routing Detail" id="agam-routing-detail">
+    <mxGraphModel dx="2562" dy="1444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="panel_msg" parent="1" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#f8f9fa;strokeColor=#6c757d;startSize=34;" value="Panel A: Control Messaging" vertex="1">
+          <mxGeometry height="520" width="1020" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_aluma" parent="panel_msg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="Aluma&#xa;Config rules / requests" vertex="1">
+          <mxGeometry height="80" width="220" x="90" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_nadan" parent="panel_msg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Nadan&#xa;Pub/Sub integration" vertex="1">
+          <mxGeometry height="80" width="220" x="90" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_sufa" parent="panel_msg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" value="Sufa&#xa;Detections and health" vertex="1">
+          <mxGeometry height="80" width="220" x="90" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_mtls" parent="panel_msg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="mTLS and Topic ACLs" vertex="1">
+          <mxGeometry height="80" width="220" x="560" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_schema" parent="panel_msg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="JSON Schema Contracts" vertex="1">
+          <mxGeometry height="80" width="220" x="570" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_broker" parent="panel_msg" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="RabbitMQ Pub/Sub&#xa;Persistent messaging core" vertex="1">
+          <mxGeometry height="110" width="220" x="770" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_e1" edge="1" parent="panel_msg" source="msg_aluma" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.2;" target="msg_broker" value="Config rules / requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_e2" edge="1" parent="panel_msg" source="msg_nadan" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="msg_broker" value="Pub/Sub integration">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_e3" edge="1" parent="panel_msg" source="msg_sufa" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.8;" target="msg_broker" value="Detections / health / config updates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_e4" edge="1" parent="panel_msg" source="msg_mtls" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;exitX=1;exitY=0.5;entryX=0.2;entryY=0;" target="msg_broker" value="Secures topics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_e5" edge="1" parent="panel_msg" source="msg_schema" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;exitX=1;exitY=0.5;entryX=0.2;entryY=1;" target="msg_broker" value="Validates payloads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="panel_query" parent="1" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#f8f9fa;strokeColor=#6c757d;startSize=34;" value="Panel B: Query and Retrieval" vertex="1">
+          <mxGeometry height="520" width="1020" x="1100" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_ops" parent="panel_query" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" value="Operators / Analysts" vertex="1">
+          <mxGeometry height="80" width="220" x="80" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_aluma" parent="panel_query" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" value="Aluma&#xa;Search interface" vertex="1">
+          <mxGeometry height="80" width="220" x="80" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_api" parent="panel_query" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Arkime Viewer / Query API" vertex="1">
+          <mxGeometry height="90" width="240" x="410" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_export" parent="panel_query" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Storage Access / Export Gateway" vertex="1">
+          <mxGeometry height="90" width="240" x="410" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_elastic" parent="panel_query" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Elasticsearch Metadata Store" vertex="1">
+          <mxGeometry height="90" width="200" x="760" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_pcap" parent="panel_query" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="PCAP Store" vertex="1">
+          <mxGeometry height="90" width="200" x="760" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_lake" parent="panel_query" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="NetApp Data Lake" vertex="1">
+          <mxGeometry height="90" width="200" x="760" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_mount" parent="panel_query" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Service Mount" vertex="1">
+          <mxGeometry height="60" width="200" x="760" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e1" edge="1" parent="panel_query" source="qry_ops" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;" target="qry_aluma" value="Operational workflows">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e2" edge="1" parent="panel_query" source="qry_aluma" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;" target="qry_api" value="Search and retrieval requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e3" edge="1" parent="panel_query" source="qry_api" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;" target="qry_elastic" value="Search indexed metadata">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e4" edge="1" parent="panel_query" source="qry_api" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;" target="qry_pcap" value="Fetch PCAP payloads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e5" edge="1" parent="panel_query" source="qry_api" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;" target="qry_export" value="Export / bundle requests">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e6" edge="1" parent="panel_query" source="qry_export" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;" target="qry_lake" value="Controlled evidence retrieval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qry_e7" edge="1" parent="panel_query" source="qry_export" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;endArrow=classic;startArrow=classic;" target="qry_mount" value="Shared service file access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="panel_lifecycle" parent="1" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#f8f9fa;strokeColor=#6c757d;startSize=34;" value="Panel C: Time and Retention" vertex="1">
+          <mxGeometry height="500" width="2080" x="40" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="life_time" parent="panel_lifecycle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" value="Agam Timebase Service&#xa;NTP/PTP UTC sync" vertex="1">
+          <mxGeometry height="90" width="250" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="life_capture" parent="panel_lifecycle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Arkime Capture" vertex="1">
+          <mxGeometry height="70" width="220" x="470" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="life_meta" parent="panel_lifecycle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Metadata Enrichment" vertex="1">
+          <mxGeometry height="70" width="220" x="470" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="life_query" parent="panel_lifecycle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Query API" vertex="1">
+          <mxGeometry height="70" width="220" x="470" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="life_policy" parent="panel_lifecycle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Retention Policy Controller" vertex="1">
+          <mxGeometry height="90" width="260" x="900" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="life_orch" parent="panel_lifecycle" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Retention Orchestrator" vertex="1">
+          <mxGeometry height="90" width="240" x="1320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="life_pcap" parent="panel_lifecycle" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="PCAP Store" vertex="1">
+          <mxGeometry height="80" width="210" x="1760" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="life_elastic" parent="panel_lifecycle" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Elastic Store" vertex="1">
+          <mxGeometry height="80" width="210" x="1760" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="life_lake" parent="panel_lifecycle" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Data Lake" vertex="1">
+          <mxGeometry height="80" width="210" x="1760" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="life_mount" parent="panel_lifecycle" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" value="Service Mount" vertex="1">
+          <mxGeometry height="80" width="210" x="1760" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e1" edge="1" parent="panel_lifecycle" source="life_time" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_capture" value="UTC time sync">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e2" edge="1" parent="panel_lifecycle" source="life_time" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_meta" value="Aligned timestamps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e3" edge="1" parent="panel_lifecycle" source="life_time" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_query" value="Time-consistent queries">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e4" edge="1" parent="panel_lifecycle" source="life_policy" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_orch" value="Policy inputs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e5" edge="1" parent="panel_lifecycle" source="life_orch" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_pcap" value="Purge &gt; 14d">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e6" edge="1" parent="panel_lifecycle" source="life_orch" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_elastic" value="TTL / index cleanup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e7" edge="1" parent="panel_lifecycle" source="life_orch" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_lake" value="Lifecycle cleanup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="life_e8" edge="1" parent="panel_lifecycle" source="life_orch" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=16;strokeWidth=2;dashed=1;endArrow=classic;" target="life_mount" value="Shared mount cleanup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tvOApNSpLNRejEGQgo6C" name="Page-2">
+    <mxGraphModel dx="3203" dy="1805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QopwK7mlLWJIObf7ibHv-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#708090;strokeColor=#2F4F4F;fontSize=16;fontStyle=1;startSize=40;fontColor=#ffffff;" value="Tier 1: Ingestion &amp; Connectivity Layer (Capture)" vertex="1">
+          <mxGeometry height="160" width="800" x="110" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-2" parent="QopwK7mlLWJIObf7ibHv-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Gigamon HC1 PacketBroker" vertex="1">
+          <mxGeometry height="70" width="220" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-3" parent="QopwK7mlLWJIObf7ibHv-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Tapping Array&amp;nbsp;" vertex="1">
+          <mxGeometry height="70" width="220" x="290" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-4" parent="QopwK7mlLWJIObf7ibHv-1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Data Filtering,&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&amp;nbsp;Deduplication and Tagging&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="550" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-5" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#007FFF;strokeColor=#0047AB;fontSize=16;fontStyle=1;startSize=40;fontColor=#ffffff;" value="Tier 2: Processing &amp; Enrichment Layer (Intelligence)" vertex="1">
+          <mxGeometry height="160" width="800" x="110" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-6" parent="QopwK7mlLWJIObf7ibHv-5" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Arkime Capture Engine" vertex="1">
+          <mxGeometry height="70" width="220" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-7" parent="QopwK7mlLWJIObf7ibHv-5" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="SPI Parser (Searchable Packet Info)" vertex="1">
+          <mxGeometry height="70" width="220" x="290" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-8" parent="QopwK7mlLWJIObf7ibHv-5" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Millisecond Timestamping (PTP/NTP Sync)" vertex="1">
+          <mxGeometry height="70" width="220" x="550" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-9" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#50C878;strokeColor=#2E8B57;fontSize=16;fontStyle=1;startSize=40;fontColor=#000000;" value="Tier 3: Persistence &amp; Data Lake Layer (Storage)" vertex="1">
+          <mxGeometry height="200" width="800" x="110" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-10" parent="QopwK7mlLWJIObf7ibHv-9" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Elasticsearch Index Cluster (Searchable Metadata)" vertex="1">
+          <mxGeometry height="70" width="220" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-11" parent="QopwK7mlLWJIObf7ibHv-9" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="NetApp Datalake (150 TB)" vertex="1">
+          <mxGeometry height="70" width="220" x="290" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-12" parent="QopwK7mlLWJIObf7ibHv-9" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="PostgreSQL (System Metadata &amp; Artifacts)" vertex="1">
+          <mxGeometry height="70" width="220" x="550" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-13" parent="QopwK7mlLWJIObf7ibHv-9" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=2" value="14-Day Automatic Retention Policy (TTL Logic)" vertex="1">
+          <mxGeometry height="30" width="740" x="30" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-14" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFD700;strokeColor=#B8860B;fontSize=16;fontStyle=1;startSize=40;fontColor=#000000;" value="Tier 4: Access &amp; Integration Layer (Consumer Facing)" vertex="1">
+          <mxGeometry height="160" width="800" x="110" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-15" parent="QopwK7mlLWJIObf7ibHv-14" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Arkime Query API (REST)" vertex="1">
+          <mxGeometry height="70" width="220" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-16" parent="QopwK7mlLWJIObf7ibHv-14" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="Shared File Service (NFS/CIFS)" vertex="1">
+          <mxGeometry height="70" width="220" x="290" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-17" parent="QopwK7mlLWJIObf7ibHv-14" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" value="System Health Dashboard" vertex="1">
+          <mxGeometry height="70" width="220" x="550" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" value="Aluma Manager" vertex="1">
+          <mxGeometry height="70" width="160" x="1030" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-19" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" value="Sensors" vertex="1">
+          <mxGeometry height="70" width="160" x="1030" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-20" parent="1" style="shape=flexArrow;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="70" width="160" x="970" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-21" edge="1" parent="1" source="QopwK7mlLWJIObf7ibHv-1" style="endArrow=classic;html=1;fontSize=16;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" target="QopwK7mlLWJIObf7ibHv-5" value="Cleaned Traffic">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-22" edge="1" parent="1" source="QopwK7mlLWJIObf7ibHv-5" style="endArrow=classic;html=1;fontSize=16;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" target="QopwK7mlLWJIObf7ibHv-9" value="Parsed Data &amp; PCAP">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-23" edge="1" parent="1" source="QopwK7mlLWJIObf7ibHv-9" style="endArrow=classic;html=1;fontSize=16;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" target="QopwK7mlLWJIObf7ibHv-14" value="Query Results">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-24" edge="1" parent="1" source="QopwK7mlLWJIObf7ibHv-27" style="endArrow=classic;html=1;fontSize=16;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;curved=1;" target="QopwK7mlLWJIObf7ibHv-8" value="PTP/NTP">
+          <mxGeometry height="50" relative="1" width="50" x="-0.1164" y="30" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-25" edge="1" parent="1" source="QopwK7mlLWJIObf7ibHv-14" style="endArrow=classic;startArrow=classic;html=1;fontSize=16;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;" target="QopwK7mlLWJIObf7ibHv-18" value="Management">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-26" edge="1" parent="1" source="QopwK7mlLWJIObf7ibHv-14" style="endArrow=classic;startArrow=classic;html=1;fontSize=16;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;edgeStyle=orthogonalEdgeStyle;" target="QopwK7mlLWJIObf7ibHv-19" value="Security Events">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QopwK7mlLWJIObf7ibHv-27" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" value="Timebase" vertex="1">
+          <mxGeometry height="70" width="160" x="1040" y="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

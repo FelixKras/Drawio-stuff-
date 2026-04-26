@@ -1,0 +1,253 @@
+<mxfile host="Electron" agent="claude-code">
+  <diagram id="agam-techstack" name="Agam Tech Stack">
+    <mxGraphModel dx="1873" dy="1375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1020" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg-l1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="" vertex="1">
+          <mxGeometry height="165" width="1360" x="60" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="" vertex="1">
+          <mxGeometry height="165" width="1360" x="60" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="" vertex="1">
+          <mxGeometry height="165" width="1360" x="60" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="" vertex="1">
+          <mxGeometry height="165" width="1360" x="60" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00695C;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="" vertex="1">
+          <mxGeometry height="165" width="1360" x="60" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-l1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F57C00;strokeColor=#E65100;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;L1&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;letter-spacing: 1px;&quot;&gt;ACQUISITION&lt;/span&gt;" vertex="1">
+          <mxGeometry height="145" width="120" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-l2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1565C0;strokeColor=#0D47A1;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;L2&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;letter-spacing: 1px;&quot;&gt;COMPUTE&lt;/span&gt;" vertex="1">
+          <mxGeometry height="145" width="120" x="70" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-l3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7B1FA2;strokeColor=#4A148C;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;L3&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;letter-spacing: 1px;&quot;&gt;APPLICATION&lt;/span&gt;" vertex="1">
+          <mxGeometry height="145" width="120" x="70" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-l4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E7D32;strokeColor=#1B5E20;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;L4&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;letter-spacing: 1px;&quot;&gt;DATA&lt;/span&gt;" vertex="1">
+          <mxGeometry height="145" width="120" x="70" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="badge-l5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#00695C;strokeColor=#004D40;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;L5&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;letter-spacing: 1px;&quot;&gt;STORAGE&lt;/span&gt;" vertex="1">
+          <mxGeometry height="145" width="120" x="70" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l1-input" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F9A825;strokeWidth=2;dashed=1;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Network Traffic&lt;/b&gt;&lt;br&gt;&lt;span&gt;Angos Segments&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="155" x="210" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l1-tap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Gigamon TAP&lt;/b&gt;&lt;br&gt;&lt;span&gt;Passive Optical / Copper&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="165" x="400" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l1-agg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Aggregator&lt;/b&gt;&lt;br&gt;&lt;span&gt;VLAN / Port Tagging&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="155" x="600" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l1-hc1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB74D;strokeColor=#E65100;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;GigaVUE-HC1&lt;/b&gt;&lt;br&gt;&lt;span&gt;Packet Broker + Flow Mapping&lt;/span&gt;" vertex="1">
+          <mxGeometry height="85" width="185" x="790" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l1-gsmart" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;GigaSMART&lt;/b&gt;&lt;br&gt;&lt;span&gt;De-dup (ASIC) + Slicing&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="175" x="1010" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l1-lb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Adaptive Load Balancer&lt;/b&gt;&lt;br&gt;&lt;span&gt;Session-Aware Hashing&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="175" x="1220" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l2-bm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#1565C0;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Bare-metal Servers&lt;/b&gt;&lt;br&gt;&lt;span&gt;Dual Xeon Gold 6338 (64c)&lt;/span&gt;&lt;br&gt;&lt;span&gt;256 GB DDR4-3200 ECC&lt;/span&gt;" vertex="1">
+          <mxGeometry height="95" width="200" x="210" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l2-k8s" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Kubernetes&lt;/b&gt;&lt;br&gt;&lt;span&gt;Pod Orchestration + HA&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="170" x="675" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l2-docker" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Docker Engine&lt;/b&gt;&lt;br&gt;&lt;span&gt;Container Isolation&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="165" x="880" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l2-os" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Ubuntu&lt;br&gt;&lt;/b&gt;&lt;span&gt;Host OS (RPM)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="170" x="470" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l3-cap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CE93D8;strokeColor=#7B1FA2;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Arkime Capture&lt;/b&gt;&lt;br&gt;&lt;span&gt;C / Ring Buffer / 10 Gbps+&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="195" x="210" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l3-view" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Arkime Viewer&lt;/b&gt;&lt;br&gt;&lt;span&gt;Node.js / Forensic UI&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="185" x="440" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l3-api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Arkime REST API&lt;/b&gt;&lt;br&gt;&lt;span&gt;Aluma / Nadan Gateway&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="185" x="660" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l3-spi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;SPI Extraction&lt;/b&gt;&lt;br&gt;&lt;span&gt;JSON Metadata per Session&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="190" x="880" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l4-es" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#A5D6A7;strokeColor=#2E7D32;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;Elasticsearch 8.x&lt;/b&gt;&lt;br&gt;&lt;span&gt;SPI Index / ILM / Sharding&lt;/span&gt;" vertex="1">
+          <mxGeometry height="85" width="220" x="350" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l4-pg" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;PostgreSQL 15.x&lt;/b&gt;&lt;br&gt;&lt;span&gt;RBAC / Config / Retention&lt;/span&gt;" vertex="1">
+          <mxGeometry height="85" width="210" x="610" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l5-netapp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#80DEEA;strokeColor=#00695C;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=1;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;NetApp ONTAP 9.x&lt;/b&gt;&lt;br&gt;&lt;span&gt;Dual-Controller / 100 TB&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="210" x="230" y="825" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l5-ptp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B2EBF2;strokeColor=#00695C;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;PTPd / Chrony&lt;/b&gt;&lt;br&gt;&lt;span&gt;Grandmaster Clock / IEEE 1588&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="205" x="455" y="825" as="geometry" />
+        </mxCell>
+        <mxCell id="node-l5-mpio" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B2EBF2;strokeColor=#00695C;strokeWidth=2;shadow=1;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="&lt;b&gt;NFS / iSCSI + MPIO&lt;/b&gt;&lt;br&gt;&lt;span&gt;25GbE Dual-Path to NetApp&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="205" x="695" y="825" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l1-1" edge="1" parent="1" source="node-l1-input" style="endArrow=block;endFill=1;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#F57C00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-l1-tap" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l1-2" edge="1" parent="1" source="node-l1-tap" style="endArrow=block;endFill=1;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#F57C00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-l1-agg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l1-3" edge="1" parent="1" source="node-l1-agg" style="endArrow=block;endFill=1;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#F57C00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-l1-hc1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l1-4" edge="1" parent="1" source="node-l1-hc1" style="endArrow=block;endFill=1;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#F57C00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-l1-gsmart" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l1-5" edge="1" parent="1" source="node-l1-gsmart" style="endArrow=block;endFill=1;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#F57C00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;" target="node-l1-lb" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l1l2" edge="1" parent="1" source="node-l1-hc1" style="endArrow=block;endFill=1;strokeColor=#546E7A;strokeWidth=2.5;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#546E7A;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node-l2-bm" value="&lt;span&gt;Filtered Traffic&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="883" y="240" />
+              <mxPoint x="310" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-l2l3" edge="1" parent="1" source="node-l2-bm" style="endArrow=block;endFill=1;strokeColor=#546E7A;strokeWidth=2.5;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#546E7A;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node-l3-cap" value="&lt;span&gt;Raw Packets (DPDK)&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.3514" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="310" y="430" />
+              <mxPoint x="308" y="430" />
+            </Array>
+            <mxPoint x="530" y="375" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-l3l4" edge="1" parent="1" source="node-l3-spi" style="endArrow=block;endFill=1;strokeColor=#546E7A;strokeWidth=2.5;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#546E7A;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node-l4-es" value="&lt;span&gt;SPI Metadata&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-l3l5-pcap" edge="1" parent="1" source="node-l3-cap" style="endArrow=block;endFill=1;strokeColor=#37474F;strokeWidth=2;dashed=1;dashPattern=8 4;fontFamily=Arial;fontSize=17;fontStyle=2;fontColor=#37474F;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="node-l5-netapp" value="&lt;span&gt;PCAP Files&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="308" y="570" />
+              <mxPoint x="200" y="570" />
+              <mxPoint x="200" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-l4l5" edge="1" parent="1" source="node-l4-es" style="endArrow=block;endFill=1;strokeColor=#546E7A;strokeWidth=2.5;fontFamily=Arial;fontSize=17;fontStyle=0;fontColor=#546E7A;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="node-l5-netapp" value="&lt;span&gt;Index Persistence&lt;/span&gt;">
+          <mxGeometry relative="1" x="0.0638" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="460" y="800" />
+              <mxPoint x="335" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#455A64;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=1;fontColor=#333333;verticalAlign=top;align=center;spacingTop=10;container=1;collapsible=0;" value="Legend" vertex="1">
+          <mxGeometry height="500" width="320" x="1460" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-l1" parent="legend-bg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="L1 — Acquisition" vertex="1">
+          <mxGeometry height="32" width="290" x="15" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-l2" parent="legend-bg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1565C0;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="L2 — Compute &amp; Virtualization" vertex="1">
+          <mxGeometry height="32" width="290" x="15" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-l3" parent="legend-bg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="L3 — Application &amp; Analysis" vertex="1">
+          <mxGeometry height="32" width="290" x="15" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-l4" parent="legend-bg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="L4 — Data &amp; Search" vertex="1">
+          <mxGeometry height="32" width="290" x="15" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-l5" parent="legend-bg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B2EBF2;strokeColor=#00695C;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="L5 — Storage &amp; Infrastructure" vertex="1">
+          <mxGeometry height="32" width="290" x="15" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-ext" parent="legend-bg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#F9A825;strokeWidth=2;dashed=1;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="External / Input Source" vertex="1">
+          <mxGeometry height="32" width="290" x="15" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-db" parent="legend-bg" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#A5D6A7;strokeColor=#2E7D32;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=10;" value="Database (Cylinder = persistent store)" vertex="1">
+          <mxGeometry height="40" width="290" x="15" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-flow" parent="legend-bg" style="text;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#546E7A;align=left;verticalAlign=middle;" value="  ——  Data / Control Flow" vertex="1">
+          <mxGeometry height="25" width="290" x="15" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-pcap" parent="legend-bg" style="text;html=1;fontFamily=Arial;fontSize=11;fontStyle=2;fontColor=#37474F;align=left;verticalAlign=middle;" value="  - - -  PCAP File Write (async)" vertex="1">
+          <mxGeometry height="25" width="290" x="15" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-key" parent="legend-bg" style="text;html=1;fontFamily=Arial;fontSize=10;fontStyle=2;fontColor=#888888;align=left;verticalAlign=middle;" value="[Key] Highlighted border = primary component" vertex="1">
+          <mxGeometry height="40" width="290" x="15" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-bg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECEFF1;strokeColor=#455A64;strokeWidth=2;fontFamily=Arial;fontSize=13;fontStyle=1;fontColor=#333333;verticalAlign=top;align=center;spacingTop=10;container=1;collapsible=0;" value="SBOM Quick Reference" vertex="1">
+          <mxGeometry height="310" width="320" x="1460" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-hdr" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#455A64;strokeColor=#263238;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;Component&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="180" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-hdr2" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#455A64;strokeColor=#263238;fontFamily=Arial;fontSize=10;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;align=center;" value="&lt;b&gt;Version&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="118" x="192" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r1a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="GigaVUE-OS" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r1b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="5.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r2a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="Kubernetes" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r2b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="1.27+" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r3a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="Docker Engine" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r3b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="24.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r4a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="Arkime Capture" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r4b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="4.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r5a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="Arkime Viewer" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r5b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="4.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r6a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="Elasticsearch" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r6b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="8.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r7a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="PostgreSQL" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r7b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="15.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r8a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00695C;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="NetApp ONTAP" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r8b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00695C;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="9.12+" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r9a" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00695C;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=left;spacingLeft=5;" value="PTPd / Chrony" vertex="1">
+          <mxGeometry height="22" width="180" x="10" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="sbom-r9b" parent="sbom-bg" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#00695C;fontFamily=Arial;fontSize=10;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;" value="4.x / 4.x" vertex="1">
+          <mxGeometry height="22" width="118" x="192" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="title-main" parent="1" style="text;html=1;resizable=0;points=[];fontFamily=Arial;fontSize=22;fontStyle=1;fontColor=#1A237E;align=center;verticalAlign=middle;" value="&lt;b&gt;אגם ברקים — Tech Stack Architecture&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="1360" x="60" y="18" as="geometry" />
+        </mxCell>
+        <mxCell id="title-sub" parent="1" style="text;html=1;resizable=0;points=[];fontFamily=Arial;fontSize=17;fontStyle=2;fontColor=#546E7A;align=center;verticalAlign=middle;" value="Five-Layer Stack: Acquisition (L1) → Compute (L2) → Application (L3) → Data (L4) → Storage (L5)  |  Standard: ISO/IEC 15288  |  v2.0 — 2026-03-30" vertex="1">
+          <mxGeometry height="24" width="1360" x="60" y="58" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

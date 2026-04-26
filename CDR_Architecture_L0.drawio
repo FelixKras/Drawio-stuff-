@@ -1,0 +1,210 @@
+<mxfile host="Claude" agent="Claude Code" version="29.6.1">
+  <diagram name="System Architecture L0" id="arch-l0">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0" background="#0D1B2A">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="label-1" value="&lt;b&gt;Agam Brakim - System Architecture Overview (L0)&lt;/b&gt;&lt;br&gt;סקירת ארכיטקטורת מערכת - אגם ברקים" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=22;fontStyle=0;fontColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="800" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- CENTRAL SYSTEM: Agam Brakim container -->
+        <!-- ============================================================ -->
+        <mxCell id="node-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1E2761;strokeColor=#028090;strokeWidth=3;arcSize=8;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="150" width="760" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="label-2" value="&lt;b&gt;אגם ברקים&lt;/b&gt;&lt;br&gt;Agam Brakim Data Infrastructure" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=18;fontStyle=0;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="620" y="160" width="360" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Internal Components -->
+        <mxCell id="node-2" value="&lt;b&gt;Gigamon TAP&lt;/b&gt;&lt;br&gt;+ HC1 Packet Broker&lt;br&gt;&lt;i&gt;רכישת נתונים&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="230" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-3" value="&lt;b&gt;Arkime&lt;/b&gt;&lt;br&gt;Capture + Viewer&lt;br&gt;&lt;i&gt;לכידה ותחקור&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="230" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-4" value="&lt;b&gt;Elasticsearch&lt;/b&gt;&lt;br&gt;Cluster (8.x)&lt;br&gt;&lt;i&gt;אינדוקס ואחזור&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="940" y="230" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-5" value="&lt;b&gt;NetApp ONTAP&lt;/b&gt;&lt;br&gt;Dual-Controller Storage&lt;br&gt;&lt;i&gt;100TB אחסון&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="360" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-6" value="&lt;b&gt;NTP/PTP&lt;/b&gt;&lt;br&gt;Time Server&lt;br&gt;&lt;i&gt;סנכרון שעונים&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="360" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-7" value="&lt;b&gt;Kubernetes&lt;/b&gt;&lt;br&gt;Orchestration&lt;br&gt;&lt;i&gt;תזמור קונטיינרים&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="940" y="360" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-8" value="&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;br&gt;Config &amp;amp; RBAC&lt;br&gt;&lt;i&gt;הגדרות והרשאות&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="490" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-9" value="&lt;b&gt;RabbitMQ&lt;/b&gt;&lt;br&gt;Message Broker (mTLS)&lt;br&gt;&lt;i&gt;תקשורת בין-מערכתית&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="490" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="node-10" value="&lt;b&gt;Datalake (NFS)&lt;/b&gt;&lt;br&gt;Shared Artifacts&lt;br&gt;&lt;i&gt;ארטיפקטים משותפים&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#FFFFFF;arcSize=12;" vertex="1" parent="1">
+          <mxGeometry x="940" y="490" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Internal flows (lighter, within the box) -->
+        <mxCell id="edge-int-1" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=1;fontFamily=Arial;fontSize=11;fontColor=#B0BEC5;dashed=1;" edge="1" parent="1" source="node-2" target="node-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-int-2" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=1;fontFamily=Arial;fontSize=11;fontColor=#B0BEC5;dashed=1;" edge="1" parent="1" source="node-3" target="node-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-int-3" style="endArrow=classic;html=1;strokeColor=#4DB6AC;strokeWidth=1;fontFamily=Arial;fontSize=11;fontColor=#B0BEC5;dashed=1;" edge="1" parent="1" source="node-3" target="node-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- EXTERNAL ENTITIES -->
+        <!-- ============================================================ -->
+
+        <!-- SUT Network (Left) -->
+        <mxCell id="node-20" value="&lt;b&gt;SUT Network&lt;/b&gt;&lt;br&gt;המערכת הנבדקת" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Aluma (Top Right) -->
+        <mxCell id="node-21" value="&lt;b&gt;אלומה (Aluma)&lt;/b&gt;&lt;br&gt;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="200" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Nadan (Right Middle) -->
+        <mxCell id="node-22" value="&lt;b&gt;נדן (Nadan)&lt;/b&gt;&lt;br&gt;EDR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="370" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Sufa (Bottom Right) -->
+        <mxCell id="node-23" value="&lt;b&gt;סופה (Sufa)&lt;/b&gt;&lt;br&gt;NIDS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="530" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Nitzoz (Bottom) -->
+        <mxCell id="node-24" value="&lt;b&gt;ניצוץ (Nitzoz)&lt;/b&gt;&lt;br&gt;RF Sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="690" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- EXTERNAL FLOWS (Arrows above shapes) -->
+        <!-- ============================================================ -->
+
+        <!-- SUT -> Gigamon (Passive TAP) -->
+        <mxCell id="edge-1" value="&lt;b&gt;Passive TAP&lt;/b&gt;&lt;br&gt;(One-Way)" style="endArrow=classic;html=1;strokeColor=#00A896;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#B0BEC5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-20" target="node-2">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Agam <-> Aluma (RabbitMQ mTLS) -->
+        <mxCell id="edge-2" value="&lt;b&gt;RabbitMQ (mTLS)&lt;/b&gt;" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF8A65;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#FFAB91;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-9" target="node-21">
+          <mxGeometry x="-0.1" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Agam -> Nadan (NFS Mount) -->
+        <mxCell id="edge-3" value="&lt;b&gt;NFS Mount&lt;/b&gt;&lt;br&gt;(Datalake)" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CE93D8;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#E1BEE7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-10" target="node-22">
+          <mxGeometry x="-0.1" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Agam -> Aluma (NFS Mount) -->
+        <mxCell id="edge-4" value="&lt;b&gt;NFS Mount&lt;/b&gt;&lt;br&gt;(Datalake)" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CE93D8;strokeWidth=3;fontFamily=Arial;fontSize=12;fontStyle=0;fontColor=#E1BEE7;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-10" target="node-21">
+          <mxGeometry x="-0.2" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- NTP/PTP sync to Sufa -->
+        <mxCell id="edge-5" value="&lt;b&gt;NTP/PTP Sync&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#81D4FA;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B3E5FC;dashed=1;dashPattern=8 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-6" target="node-23">
+          <mxGeometry x="-0.3" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- NTP/PTP sync to Nitzoz -->
+        <mxCell id="edge-6" value="&lt;b&gt;NTP/PTP Sync&lt;/b&gt;" style="endArrow=classic;html=1;strokeColor=#81D4FA;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B3E5FC;dashed=1;dashPattern=8 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-6" target="node-24">
+          <mxGeometry x="-0.3" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- NTP/PTP sync to Aluma -->
+        <mxCell id="edge-7" value="" style="endArrow=classic;html=1;strokeColor=#81D4FA;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B3E5FC;dashed=1;dashPattern=8 4;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-6" target="node-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- NTP/PTP sync to Nadan -->
+        <mxCell id="edge-8" value="" style="endArrow=classic;html=1;strokeColor=#81D4FA;strokeWidth=2;fontFamily=Arial;fontSize=11;fontStyle=0;fontColor=#B3E5FC;dashed=1;dashPattern=8 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="node-6" target="node-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- LEGEND -->
+        <!-- ============================================================ -->
+        <mxCell id="node-30" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0D1B2A;strokeColor=#546E7A;strokeWidth=1;arcSize=8;opacity=80;" vertex="1" parent="1">
+          <mxGeometry x="80" y="670" width="280" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="label-30" value="&lt;b&gt;Legend / מקרא&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#ECEFF1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="680" width="200" height="30" as="geometry" />
+        </mxCell>
+        <!-- Legend items -->
+        <mxCell id="leg-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#028090;strokeColor=#00A896;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="720" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-1t" value="Agam Internal Component" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="715" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=#546E7A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="100" y="750" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-2t" value="External Subsystem" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="745" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-3" value="" style="endArrow=classic;html=1;strokeColor=#00A896;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="795" as="sourcePoint" />
+            <mxPoint x="130" y="795" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-3t" value="Passive TAP (One-Way)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="780" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-4" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#FF8A65;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="825" as="sourcePoint" />
+            <mxPoint x="130" y="825" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-4t" value="RabbitMQ (mTLS, Bidirectional)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="810" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-5" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#CE93D8;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="855" as="sourcePoint" />
+            <mxPoint x="130" y="855" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-5t" value="NFS Mount (Datalake)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="840" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-6" value="" style="endArrow=classic;html=1;strokeColor=#81D4FA;strokeWidth=2;dashed=1;dashPattern=8 4;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="885" as="sourcePoint" />
+            <mxPoint x="130" y="885" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-6t" value="NTP/PTP Time Sync" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#B0BEC5;" vertex="1" parent="1">
+          <mxGeometry x="140" y="870" width="200" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
