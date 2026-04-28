@@ -1,0 +1,177 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36">
+  <diagram id="diagram-1" name="Nadan-Architecture">
+    <mxGraphModel dx="1068" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="group-nadan" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=0;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#333333;verticalAlign=top;align=center;spacingTop=10;container=1;collapsible=0;" value="Nadan — Security Scanning &amp;amp; Anomaly Detection Platform" vertex="1">
+          <mxGeometry height="1080" width="1780" x="500" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="group-vr" parent="group-nadan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=0;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#1a3a5c;verticalAlign=top;align=center;spacingTop=10;container=1;collapsible=0;" value="Agent Management Server — Data Collection Engine" vertex="1">
+          <mxGeometry height="1000" width="580" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vr-step1" parent="group-vr" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 1&lt;/b&gt; — Create Agents (Sensors)&lt;br&gt;from Saved Configurations" vertex="1">
+          <mxGeometry height="80" width="500" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vr-step2" parent="group-vr" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 2&lt;/b&gt; — Connect to Assets,&lt;br&gt;Deploy and Activate Agents" vertex="1">
+          <mxGeometry height="80" width="500" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="vr-step3" parent="group-vr" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 3&lt;/b&gt; — Wait for Data&lt;br&gt;Collection to Complete" vertex="1">
+          <mxGeometry height="80" width="500" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="vr-step4" parent="group-vr" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 4&lt;/b&gt; — Persist Raw&lt;br&gt;Collected Data" vertex="1">
+          <mxGeometry height="80" width="500" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="vr-store" parent="group-vr" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;Raw Scan Data Store&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Collected artifacts / forensic evidence&lt;/span&gt;" vertex="1">
+          <mxGeometry height="110" width="300" x="140" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="vr-assets" parent="group-vr" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;dashed=1;strokeWidth=2;" value="&lt;b&gt;Monitored Endpoints&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Windows · Linux · macOS assets&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="300" x="140" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="group-na" parent="group-nadan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;dashed=0;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#2d5a2d;verticalAlign=top;align=center;spacingTop=10;container=1;collapsible=0;" value="Nadan Analyzer — Baseline Comparison" vertex="1">
+          <mxGeometry height="1000" width="540" x="620" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="na-step1" parent="group-na" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 1&lt;/b&gt; — Compare Each Scan Result&lt;br&gt;Against the Baseline Profile" vertex="1">
+          <mxGeometry height="80" width="500" x="20" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="na-step2" parent="group-na" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 2&lt;/b&gt; — Identify Potential&lt;br&gt;Security Anomalies &amp;amp; Deviations" vertex="1">
+          <mxGeometry height="80" width="500" x="20" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="na-baseline" parent="group-na" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;Baseline Profile Store&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Golden state · Known-good signatures&lt;/span&gt;" vertex="1">
+          <mxGeometry height="110" width="320" x="110" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="na-output" parent="group-na" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;dashed=1;strokeWidth=2;" value="&lt;b&gt;Anomaly Findings&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Severity · Asset · Evidence&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="320" x="110" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="group-ep" parent="group-nadan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=0;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#7a4a00;verticalAlign=top;align=center;spacingTop=10;container=1;collapsible=0;" value="Event Processor — Alert Generation" vertex="1">
+          <mxGeometry height="1000" width="580" x="1180" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ep-step1" parent="group-ep" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 1&lt;/b&gt; — Generate Events / Alerts&lt;br&gt;from Anomaly Findings" vertex="1">
+          <mxGeometry height="80" width="500" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ep-step2" parent="group-ep" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=4;spacingBottom=4;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Step 2&lt;/b&gt; — Publish Events&lt;br&gt;to the Message Broker" vertex="1">
+          <mxGeometry height="80" width="500" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ep-schema" parent="group-ep" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;dashed=1;strokeWidth=2;" value="&lt;b&gt;Event Payload&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;event_id · timestamp · asset_id&lt;br&gt;rule_id · severity · details · evidence_uri&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="500" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ep-persist" parent="group-ep" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;Event Archive&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Long-term audit trail&lt;br&gt;→ back to PostgreSQL&lt;/span&gt;" vertex="1">
+          <mxGeometry height="110" width="320" x="130" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-ep2-persist" edge="1" parent="group-ep" source="ep-schema" style="endArrow=block;endFill=1;strokeColor=#d79b00;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=2;fontColor=#7a4a00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="ep-persist" value="archive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node-aluma" parent="1" style="shape=mxgraph.basic.rect;rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;spacingTop=2;spacingBottom=2;spacingLeft=8;spacingRight=8;strokeWidth=2;" value="&lt;b&gt;Aluma&lt;/b&gt;&lt;br&gt;&lt;span&gt;Management UI / Dashboard&lt;br&gt;Operator Console&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="240" x="130" y="61" as="geometry" />
+        </mxCell>
+        <mxCell id="node-rabbit" parent="1" style="shape=hexagon;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;RabbitMQ&lt;/b&gt;&lt;br&gt;&lt;span&gt;Message Broker&lt;br&gt;Commands / Events Bus&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="280" x="1080" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="node-postgres" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;br&gt;&lt;span&gt;Assets &amp;amp; Scan Policies&lt;br&gt;Baselines · Event History&lt;/span&gt;" vertex="1">
+          <mxGeometry height="150" width="220" x="140" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-al-rb-cmd" edge="1" parent="1" source="node-aluma" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#1a3a5c;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.157;entryY=0.211;entryDx=0;entryDy=0;entryPerimeter=0;" target="node-rabbit" value="Sensor Commands">
+          <mxGeometry relative="1" x="0.1609" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="980" y="91" />
+              <mxPoint x="980" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-rb-al-status" edge="1" parent="1" source="node-rabbit" style="endArrow=block;endFill=1;strokeColor=#d6b656;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#7a4a00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;exitX=0.15;exitY=0.804;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;curved=1;exitPerimeter=0;" target="node-aluma" value="Sensor Status / Events">
+          <mxGeometry relative="1" x="-0.2265" y="-40" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1040" y="196" />
+              <mxPoint x="1040" y="180" />
+              <mxPoint x="725" y="180" />
+              <mxPoint x="725" y="151" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-pg-vr" edge="1" parent="1" source="node-postgres" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#2d5a2d;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;" target="vr-step1" value="Assets &amp;amp; Scan Policies">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-rb-vr" edge="1" parent="1" source="node-rabbit" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#1a3a5c;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="group-vr" value="Agent workflow">
+          <mxGeometry relative="1" x="-0.283" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1220" y="260" />
+              <mxPoint x="810" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-vr4-store" edge="1" parent="1" source="vr-step4" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=2;fontColor=#1a3a5c;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;" target="vr-store" value="write">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-vrstore-na1" edge="1" parent="1" source="vr-store" style="endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#333333;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="na-step1" value="Raw Scan Data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="1115" />
+              <mxPoint x="1080" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-ep1-schema" edge="1" parent="1" style="endArrow=open;endFill=0;strokeColor=#999999;strokeWidth=1;fontFamily=Arial;fontSize=19;fontStyle=2;fontColor=#999999;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;labelBackgroundColor=#ffffff;" target="ep-schema" value="formats">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1970" y="740.63994140625" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-ep2-rb" edge="1" parent="1" source="ep-step2" style="endArrow=block;endFill=1;strokeColor=#d79b00;strokeWidth=3;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#7a4a00;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="node-rabbit" value="Events (publish)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2320" y="700" />
+              <mxPoint x="2320" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-archive-pg" edge="1" parent="1" source="ep-persist" style="endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=2;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#2d5a2d;edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="node-postgres" value="Event History">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1960" y="1170" />
+              <mxPoint x="1960" y="1400" />
+              <mxPoint x="250" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-subtitle" parent="1" style="text;html=1;resizable=0;points=[];autosize=0;fontFamily=Arial;fontSize=19;fontStyle=2;fontColor=#555555;align=center;verticalAlign=middle;" value="Agent-based asset scanning → baseline comparison → anomaly event publication" vertex="1">
+          <mxGeometry height="24" width="1200" x="600" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="label-flow-title" parent="1" style="text;html=1;resizable=0;points=[];autosize=0;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#333333;align=left;verticalAlign=middle;" value="End-to-End Flow" vertex="1">
+          <mxGeometry height="24" width="250" x="140" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="label-flow-text" parent="1" style="text;html=1;resizable=0;points=[];autosize=0;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=top;" value="① Operator defines assets &amp;amp; policies in Aluma → stored in PostgreSQL&lt;br&gt;② Operator triggers scan; command travels via RabbitMQ to Velociraptor&lt;br&gt;③ Velociraptor creates agents, deploys them, collects raw data&lt;br&gt;④ Analyzer compares raw data to baseline, surfaces anomalies&lt;br&gt;⑤ Event Processor builds event payloads and publishes to RabbitMQ&lt;br&gt;⑥ Aluma consumes events; history persisted back to PostgreSQL" vertex="1">
+          <mxGeometry height="160" width="580" x="50" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-group" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontFamily=Arial;fontSize=19;fontStyle=1;fontColor=#333333;verticalAlign=top;align=center;spacingTop=8;container=1;collapsible=0;" value="Legend" vertex="1">
+          <mxGeometry height="280" width="420" x="2230" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-ui" parent="legend-group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;" value="  UI / Operator Console (Aluma)" vertex="1">
+          <mxGeometry height="26" width="400" x="10" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-broker" parent="legend-group" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;" value="  Message Broker (hexagon)" vertex="1">
+          <mxGeometry height="26" width="400" x="10" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-db" parent="legend-group" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;" value="  Datastore (cylinder)" vertex="1">
+          <mxGeometry height="32" width="400" x="10" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-vr" parent="legend-group" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;strokeWidth=2;" value="  Velociraptor subsystem (blue)" vertex="1">
+          <mxGeometry height="26" width="400" x="10" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-na" parent="legend-group" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;strokeWidth=2;" value="  Nadan Analyzer subsystem (green)" vertex="1">
+          <mxGeometry height="26" width="400" x="10" y="169" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-ep" parent="legend-group" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;strokeWidth=2;" value="  Event Processor subsystem (orange)" vertex="1">
+          <mxGeometry height="26" width="400" x="10" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-solid" parent="legend-group" style="text;html=1;resizable=0;points=[];autosize=0;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;" value="  Solid arrow — synchronous data flow" vertex="1">
+          <mxGeometry height="18" width="400" x="10" y="233" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-dashed" parent="legend-group" style="text;html=1;resizable=0;points=[];autosize=0;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#333333;align=left;verticalAlign=middle;" value="  Dashed arrow — async / control / archival path" vertex="1">
+          <mxGeometry height="18" width="400" x="10" y="253" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
