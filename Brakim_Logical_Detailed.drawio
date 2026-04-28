@@ -1,0 +1,386 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="brakim_logical_detailed" name="Brakim Logical Architecture - Detailed">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#333333;" value="Brakim System - Logical Architecture (Detailed View)" vertex="1">
+          <mxGeometry height="40" width="600" x="400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" value="" vertex="1">
+          <mxGeometry height="180" width="190" x="20" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" value="Legend" vertex="1">
+          <mxGeometry height="20" width="80" x="50" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_sensor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="30" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_sensor_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Edge Sensor" vertex="1">
+          <mxGeometry height="20" width="115" x="55" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_manager" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="30" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_manager_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Manager / Fusion" vertex="1">
+          <mxGeometry height="20" width="155" x="55" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_broker" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="25" width="20" x="30" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_broker_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Message Broker" vertex="1">
+          <mxGeometry height="20" width="155" x="55" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_storage" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="25" width="20" x="30" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_storage_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Storage / Datalake" vertex="1">
+          <mxGeometry height="20" width="165" x="55" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_external" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="30" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_external_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="External System" vertex="1">
+          <mxGeometry height="20" width="155" x="55" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="sensors_zone" parent="1" style="swimlane;horizontal=1;fillColor=#f0f7ff;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;rounded=1;" value="Sensors" vertex="1">
+          <mxGeometry height="720" width="280" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sufa_container" parent="sensors_zone" style="swimlane;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;rounded=1;" value="Sufa (NIDS)" vertex="1">
+          <mxGeometry height="120" width="240" x="20" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sufa_desc" parent="sufa_container" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Network Intrusion&#xa;Detection System" vertex="1">
+          <mxGeometry height="30" width="200" x="20" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sufa_publisher" parent="sufa_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Event Publisher" vertex="1">
+          <mxGeometry height="30" width="130" x="55" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_container" parent="sensors_zone" style="swimlane;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;rounded=1;" value="Nadan (Forensic)" vertex="1">
+          <mxGeometry height="320" width="240" x="20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_desc" parent="nadan_container" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Forensic collection &amp;amp; analysis" vertex="1">
+          <mxGeometry height="25" width="220" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_collector" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Analysis&lt;div&gt;Engine&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="15" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_normalizer" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Normalizer" vertex="1">
+          <mxGeometry height="40" width="80" x="145" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_forwarder" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Rules manager" vertex="1">
+          <mxGeometry height="30" width="120" x="15" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_publisher" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Event Publisher" vertex="1">
+          <mxGeometry height="30" width="150" x="50" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_artifact" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Artifact&lt;br&gt;manager" vertex="1">
+          <mxGeometry height="40" width="80" x="145" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_velociraptor" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Agent manager" vertex="1">
+          <mxGeometry height="25" width="120" x="15" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="c1iK4smBYp1IIYFOjJOq-6" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Health watchdog" vertex="1">
+          <mxGeometry height="40" width="80" x="145" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="c1iK4smBYp1IIYFOjJOq-7" parent="nadan_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Security module" vertex="1">
+          <mxGeometry height="40" width="120" x="15" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nadan_golden" parent="nadan_container" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Golden Image&#xa;Baseline DB" vertex="1">
+          <mxGeometry height="60" width="100" x="135" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_golden_analysis" edge="1" parent="nadan_container" source="nadan_golden" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=16;" target="nadan_collector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nitzoz_container" parent="sensors_zone" style="swimlane;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;rounded=1;" value="Nitzoz (RF)" vertex="1">
+          <mxGeometry height="100" width="240" x="20" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="nitzoz_desc" parent="nitzoz_container" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" value="Radio Frequency&amp;nbsp;Sensor" vertex="1">
+          <mxGeometry height="35" width="220" x="10" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="nitzoz_publisher" parent="nitzoz_container" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Event Publisher" vertex="1">
+          <mxGeometry height="25" width="130" x="55" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="broker_zone" parent="1" style="swimlane;horizontal=1;fillColor=#fff8e6;strokeColor=#d79b00;fontStyle=1;fontSize=16;rounded=1;" value="Message Broker " vertex="1">
+          <mxGeometry height="620" width="340" x="450" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="rabbitmq" parent="broker_zone" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=16;" value="Apache RabbitMQ&#xa;Central Pub/Sub Broker" vertex="1">
+          <mxGeometry height="100" width="200" x="70" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rmq_security" parent="broker_zone" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=2;" value="mTLS Auth&#xa;Per-Topic ACL" vertex="1">
+          <mxGeometry height="25" width="150" x="95" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="queue_info" parent="broker_zone" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;" value="Queue Properties:&lt;br&gt;- Persistent delivery&lt;br&gt;- Durable subs&lt;br&gt;- Max msg: 256KB&lt;br&gt;- Nominal throughput:&lt;br&gt;&amp;nbsp;10 EPS min" vertex="1">
+          <mxGeometry height="150" width="145" x="20" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="perf_info" parent="broker_zone" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;" value="Performance:&#xa;- p95 Latency: &lt;1s&#xa;- p99 Latency: &lt;5s&#xa;- Normal Load: 3 EPS&#xa;- Heartbeat: 1Hz" vertex="1">
+          <mxGeometry height="150" width="145" x="175" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="678l9rYwC459hx-f9K6_-1" parent="broker_zone" style="swimlane;whiteSpace=wrap;html=1;rounded=1;strokeColor=#d79b00;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fontStyle=1;horizontal=1;fillColor=#fff8e6;" value="Topics" vertex="1">
+          <mxGeometry height="210" width="300" x="20" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="topic_events" parent="678l9rYwC459hx-f9K6_-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;fontStyle=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontColor=default;gradientColor=none;" value="EventSuggest.*" vertex="1">
+          <mxGeometry height="50" width="120" x="10" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="topic_heartbeat" parent="678l9rYwC459hx-f9K6_-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;fontStyle=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontColor=default;gradientColor=none;" value="BIT.*" vertex="1">
+          <mxGeometry height="65" width="120" x="10" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="topic_rules" parent="678l9rYwC459hx-f9K6_-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;fontStyle=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontColor=default;gradientColor=none;" value="RULES&lt;br&gt;(Config/Rules)" vertex="1">
+          <mxGeometry height="50" width="145" x="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="topic_commands" parent="678l9rYwC459hx-f9K6_-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;fontStyle=1;align=left;verticalAlign=top;fontFamily=Helvetica;fontColor=default;gradientColor=none;" value="Commands.*&lt;br&gt;(Control Commands)" vertex="1">
+          <mxGeometry height="65" width="145" x="140" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="aluma_zone" parent="1" style="swimlane;horizontal=1;fillColor=#e8f5e9;strokeColor=#82b366;fontStyle=1;fontSize=16;rounded=1;" value="Aluma - Fusion Engine &amp; Manager" vertex="1">
+          <mxGeometry height="640" width="400" x="930" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ingestion_layer" parent="aluma_zone" style="swimlane;horizontal=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=0;fontSize=16;rounded=1;" value="Ingestion Layer (Node)" vertex="1">
+          <mxGeometry height="100" width="370" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ingestion_svc" parent="ingestion_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Pubsub&lt;br&gt;In/Di/gestion" vertex="1">
+          <mxGeometry height="55" width="100" x="10" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="schema_validator" parent="ingestion_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Schema&#xa;Validator" vertex="1">
+          <mxGeometry height="55" width="70" x="120" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dedup" parent="ingestion_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="Report&lt;br&gt;Generator" vertex="1">
+          <mxGeometry height="55" width="80" x="200" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="enricher" parent="ingestion_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="40" width="45" x="310" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="correlation_layer" parent="aluma_zone" style="swimlane;horizontal=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=0;fontSize=16;rounded=1;" value="BL &amp; Correlation Engine (Python)" vertex="1">
+          <mxGeometry height="130" width="370" x="10" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="event_correlator" parent="correlation_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" value="Cross-Sensor&#xa;Correlator" vertex="1">
+          <mxGeometry height="45" width="110" x="10" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="rule_engine" parent="correlation_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" value="Rule&#xa;Engine" vertex="1">
+          <mxGeometry height="45" width="60" x="130" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_engine" parent="correlation_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" value="Analytics&lt;br&gt;Engine" vertex="1">
+          <mxGeometry height="45" width="80" x="200" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="alert_gen" parent="correlation_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" value="Alert&#xa;Generator" vertex="1">
+          <mxGeometry height="45" width="75" x="285" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="health_monitor" parent="correlation_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" value="Health&#xa;Monitor" vertex="1">
+          <mxGeometry height="35" width="110" x="10" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qradar_forwarder" parent="correlation_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;" value="QRadar&#xa;Forwarder" vertex="1">
+          <mxGeometry height="35" width="70" x="287.5" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="api_layer" parent="aluma_zone" style="swimlane;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;fontSize=16;rounded=1;" value="API &amp; Presentation Layer" vertex="1">
+          <mxGeometry height="75" width="380" x="10" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="api_gateway" parent="api_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" value="API Gateway" vertex="1">
+          <mxGeometry height="35" width="70" x="10" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="api_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" value="Auth&lt;br&gt;(RBAC)" vertex="1">
+          <mxGeometry height="35" width="60" x="90" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="dashboard" parent="api_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" value="UI" vertex="1">
+          <mxGeometry height="35" width="60" x="160" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="incidents" parent="api_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="35" width="60" x="230" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="config_layer" parent="aluma_zone" style="swimlane;horizontal=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=0;fontSize=16;rounded=1;" value="Config &amp; Rule Distribution" vertex="1">
+          <mxGeometry height="95" width="370" x="10" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="rule_manager" parent="config_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" value="Rule&#xa;Manager" vertex="1">
+          <mxGeometry height="35" width="70" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="config_dist" parent="config_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" value="Config&#xa;Distributor" vertex="1">
+          <mxGeometry height="35" width="80" x="90" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="storage_layer" parent="aluma_zone" style="swimlane;horizontal=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=0;fontSize=16;rounded=1;" value="Storage Layer" vertex="1">
+          <mxGeometry height="80" width="370" x="10" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" parent="storage_layer" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;verticalAlign=bottom;" value="PostgreSQL" vertex="1">
+          <mxGeometry height="35" width="80" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="time_series" parent="storage_layer" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;align=center;verticalAlign=bottom;" value="File Storage" vertex="1">
+          <mxGeometry height="35" width="80" x="100" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="file_storage" parent="storage_layer" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="35" width="40" x="250" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="datalake_zone" parent="1" style="swimlane;horizontal=1;fillColor=#f3e5f5;strokeColor=#9673a6;fontStyle=1;fontSize=16;rounded=1;" value="Agam Zone (Infrastructure &amp; Data)" vertex="1">
+          <mxGeometry height="160" width="500" x="20" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="datalake" parent="datalake_zone" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=16;" value="Datalake&#xa;(Artifacts, PCAP)" vertex="1">
+          <mxGeometry height="80" width="180" x="10" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ca_label" parent="datalake_zone" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=2;fontColor=#e65100;" value="mTLS Certs" vertex="1">
+          <mxGeometry height="20" width="80" x="250" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="elasticsearch" parent="datalake_zone" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=16;" value="Elasticsearch&#xa;(Logs/Search)" vertex="1">
+          <mxGeometry height="80" width="140" x="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ntp_ptp" parent="datalake_zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=16;" value="NTP/PTP Time Server" vertex="1">
+          <mxGeometry height="30" width="220" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arkime" parent="datalake_zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=16;" value="Arkime&#xa;(Packet Capture &amp; Query)" vertex="1">
+          <mxGeometry height="80" width="120" x="350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="external_zone" parent="1" style="swimlane;horizontal=1;fillColor=#fce4ec;strokeColor=#b85450;fontStyle=1;fontSize=16;rounded=1;" value="External Systems" vertex="1">
+          <mxGeometry height="200" width="200" x="1450" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="qradar" parent="external_zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=16;" value="QRadar&lt;br&gt;SIEM&lt;br&gt;(&lt;span style=&quot;font-style: italic; font-weight: 400;&quot;&gt;Syslog over TLS&lt;/span&gt;)" vertex="1">
+          <mxGeometry height="60" width="140" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ad" parent="external_zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=16;" value="Active Directory&#xa;(LDAP)" vertex="1">
+          <mxGeometry height="50" width="140" x="30" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ca_zone" parent="1" style="swimlane;horizontal=1;fillColor=#fff3e0;strokeColor=#e65100;fontStyle=1;fontSize=16;rounded=1;" value="Security Infrastructure" vertex="1">
+          <mxGeometry height="120" width="200" x="820" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="internal_ca" parent="ca_zone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontStyle=1;fontSize=16;" value="Brakim Internal CA&#xa;(mTLS Certificates)" vertex="1">
+          <mxGeometry height="60" width="160" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_sufa_events" edge="1" parent="1" source="sufa_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;startArrow=classic;entryX=0;entryY=0.5;exitX=1;exitY=0.3;fontSize=16;" target="rabbitmq" value="brakim.EventSuggest.*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="320" y="280" />
+              <Point x="320" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_nadan_events" edge="1" parent="1" source="nadan_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=3;endArrow=classic;startArrow=none;entryX=0;entryY=0.5;exitX=1;exitY=0.5;fontSize=16;startFill=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fontStyle=1;labelBackgroundColor=default;" target="rabbitmq" value="EventSuggest">
+          <mxGeometry relative="1" x="0.35" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="380" y="550" />
+              <mxPoint x="380" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_nitzoz_events" edge="1" parent="1" source="nitzoz_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;startArrow=classic;entryX=0;entryY=0.5;exitX=1;exitY=0.7;fontSize=16;" target="rabbitmq" value="brakim.EventSuggest.*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="320" y="560" />
+              <Point x="320" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_sufa_health" edge="1" parent="1" source="sufa_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=1;dashed=1;endArrow=classic;entryX=0;entryY=0.7;exitX=1;exitY=0.9;fontSize=16;" value="health.status / BIT">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="310" y="363" />
+            </Array>
+            <mxPoint x="470" y="583.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_nadan_health" edge="1" parent="1" source="nadan_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=3;dashed=1;endArrow=classic;exitX=1;exitY=0.9;fontSize=16;startArrow=classic;startFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="broker_zone" value="CBIT / PUBIT&lt;br&gt;ReqBIT">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_nitzoz_health" edge="1" parent="1" source="nitzoz_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=1;dashed=1;endArrow=classic;entryX=0;entryY=0.8;exitX=1;exitY=0.9;fontSize=16;" value="health.status / BIT">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="310" y="605" />
+              <Point x="310" y="367" />
+            </Array>
+            <mxPoint x="470" y="587" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_rmq_aluma_events" edge="1" parent="1" source="rabbitmq" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=3;endArrow=classic;startArrow=none;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=16;fontStyle=1;startFill=0;spacingLeft=46;" target="aluma_zone" value="EventSuggest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_rmq_aluma_health" edge="1" parent="1" source="rabbitmq" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=3;dashed=1;endArrow=classic;entryX=0;entryY=0.7;exitX=1;exitY=0.6;fontSize=16;align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;labelBackgroundColor=default;startArrow=classic;startFill=0;spacingLeft=40;" target="aluma_zone" value="CBIT / PUBIT&lt;br&gt;ReqBIT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_aluma_rules" edge="1" parent="1" source="config_dist" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;endArrow=classic;startArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5;fontSize=16;" target="topic_rules" value="brakim.RULES">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="680" y="448" />
+              <Point x="680" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_rmq_sufa_rules" edge="1" parent="1" source="topic_rules" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;endArrow=classic;exitX=0;exitY=0.3;entryX=1;entryY=0.3;fontSize=16;" target="sufa_container" value="brakim.RULES">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="330" y="268" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_rmq_nitzoz_rules" edge="1" parent="1" source="topic_rules" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;endArrow=classic;exitX=0;exitY=0.7;entryX=1;entryY=0.7;fontSize=16;" target="nitzoz_container" value="brakim.RULES">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="330" y="622" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_nadan_datalake" edge="1" parent="1" source="nadan_container" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=classic;exitX=0.5;exitY=1;entryX=0;entryY=0.5;fontSize=16;" target="datalake" value="Upload Artifacts&#xa;(&gt;256KB)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="160" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_aluma_datalake" edge="1" parent="1" source="aluma_zone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=classic;startArrow=classic;exitX=0;exitY=1;entryX=1;entryY=0.5;fontSize=16;" target="datalake" value="Fetch Artifacts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="720" y="780" />
+              <Point x="720" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_aluma_qradar" edge="1" parent="1" source="aluma_zone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b85450;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.25;entryX=0;entryY=0.5;fontSize=16;exitDx=0;exitDy=0;" target="qradar" value="Forward Events">
+          <mxGeometry relative="1" x="0.0588" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1390" y="250" />
+              <mxPoint x="1390" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_aluma_ad" edge="1" parent="1" source="aluma_zone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#b85450;strokeWidth=2;dashed=1;endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=16;" target="ad" value="User Lookup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_ca_rmq" edge="1" parent="1" source="internal_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e65100;strokeWidth=1;dashed=1;endArrow=none;exitX=0;exitY=0.5;entryX=1;entryY=0.8;fontSize=16;" target="rabbitmq" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <Point x="1100" y="500" />
+              <Point x="1100" y="660" />
+              <Point x="680" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="version_info" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=2;fontColor=#666666;" value="v1.5 - Based on ICD/SSDD Documentation" vertex="1">
+          <mxGeometry height="20" width="250" x="1400" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_aluma_elasticsearch" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9673a6;strokeWidth=2;dashed=1;endArrow=classic;entryX=1;entryY=0.75;fontSize=16;entryDx=0;entryDy=0;" target="datalake_zone" value="ELastic Query/ Deposit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1290" y="1110" />
+            </Array>
+            <mxPoint x="1290" y="730" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_ntp_sensors" edge="1" parent="1" source="ntp_ptp" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=1;dashed=1;endArrow=classic;exitX=0;exitY=0.5;entryX=0.5;entryY=1;fontSize=16;" target="sensors_zone" value="Time Sync">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_ntp_broker" edge="1" parent="1" source="datalake_zone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;dashed=1;endArrow=classic;exitX=1;exitY=0.25;entryX=0.5;entryY=1;fontSize=16;exitDx=0;exitDy=0;" target="broker_zone" value="Time Sync">
+          <mxGeometry relative="1" x="-0.0476" y="-10" as="geometry">
+            <mxPoint x="-10" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_ntp_aluma" edge="1" parent="1" source="datalake_zone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;dashed=1;endArrow=classic;entryX=0.5;entryY=1;fontSize=16;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="aluma_zone" value="Time Sync">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="1040" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_aluma_arkime" edge="1" parent="1" source="aluma_zone" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=2;dashed=1;endArrow=classic;exitX=0.75;exitY=1;entryX=1;entryY=0.5;fontSize=16;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="datalake_zone" value="Query PCAP">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
