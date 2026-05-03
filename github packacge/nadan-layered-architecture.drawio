@@ -1,0 +1,100 @@
+<mxfile host="Electron" agent="OpenCode">
+  <diagram id="nadan-layered-architecture-clean" name="Nadan Layered Architecture">
+    <mxGraphModel dx="2860" dy="2063" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=34;fontStyle=1;fontColor=#16324f;" value="Nadan Subsystem - Clean Layered Architecture" vertex="1">
+          <mxGeometry height="44" width="1480" x="360" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=20;fontStyle=2;fontColor=#5b677a;" value="Layered view of endpoint collection, baseline comparison, persistence, and Pub/Sub integration" vertex="1">
+          <mxGeometry height="28" width="1480" x="360" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="layer4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef6ff;strokeColor=#4b83c3;fontFamily=Arial;fontSize=20;fontStyle=1;fontColor=#16324f;align=left;verticalAlign=top;spacingLeft=22;spacingTop=14;container=1;collapsible=0;" value="Layer 4 - Integration Boundary" vertex="1">
+          <mxGeometry height="165" width="1760" x="150" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="rabbit" parent="layer4" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4b83c3;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=2;" value="&lt;b&gt;RabbitMQ Message Bus&lt;/b&gt;" vertex="1">
+          <mxGeometry height="88" width="333.4736842105263" x="861.4736842105264" y="49" as="geometry" />
+        </mxCell>
+        <mxCell id="security" parent="layer4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4b83c3;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Security Contract&lt;/b&gt;&lt;br&gt;mTLS, per-topic ACLs, JSON Schema" vertex="1">
+          <mxGeometry height="76" width="444.63157894736844" x="296.42105263157896" y="61" as="geometry" />
+        </mxCell>
+        <mxCell id="layer3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#effaf1;strokeColor=#4b9b61;fontFamily=Arial;fontSize=20;fontStyle=1;fontColor=#16324f;align=left;verticalAlign=top;spacingLeft=22;spacingTop=14;container=1;collapsible=0;" value="Layer 3 - Nadan Application Services" vertex="1">
+          <mxGeometry height="220" width="1760" x="150" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-api" parent="layer3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4b9b61;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Management API&lt;/b&gt;" vertex="1">
+          <mxGeometry height="78" width="240.8421052631579" x="46.31578947368421" y="71" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-orch" parent="layer3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4b9b61;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Collection Orchestrator&lt;/b&gt;&lt;br&gt;Periodic and on-demand checks" vertex="1">
+          <mxGeometry height="78" width="240.8421052631579" x="500.2105263157895" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-compare" parent="layer3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4b9b61;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Baseline and Anomaly Engine&lt;/b&gt;&lt;br&gt;Golden Configuration comparison" vertex="1">
+          <mxGeometry height="78" width="277.89473684210526" x="805.8947368421052" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-pub" parent="layer3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#4b9b61;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Publisher / Heartbeat&lt;/b&gt;&lt;br&gt;Events, BIT, retry handling" vertex="1">
+          <mxGeometry height="78" width="240.8421052631579" x="1240.0015789473682" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="layer2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5efff;strokeColor=#7b5bb6;fontFamily=Arial;fontSize=20;fontStyle=1;fontColor=#16324f;align=left;verticalAlign=top;spacingLeft=22;spacingTop=14;container=1;collapsible=0;" value="Layer 2 - Data and &lt;br&gt;Persistence" vertex="1">
+          <mxGeometry height="180" width="1770" x="150" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="data-db" parent="layer2" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b5bb6;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;PostgreSQL Unified DB&lt;/b&gt;&lt;br&gt;agents, artifacts, anomalies, audit log" vertex="1">
+          <mxGeometry height="108" width="391.2631578947368" x="270.1578947368421" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="data-golden" parent="layer2" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b5bb6;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Signed Golden Images&lt;/b&gt;" vertex="1">
+          <mxGeometry height="118" width="349.3421052631579" x="819.9994736842106" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="data-large" parent="layer2" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7b5bb6;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Artifact References&lt;/b&gt;&lt;br&gt;Large objects stored in Agam Datalake" vertex="1">
+          <mxGeometry height="118" width="391.2631578947368" x="1243.8678947368421" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="layer1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8eb;strokeColor=#d08a27;fontFamily=Arial;fontSize=20;fontStyle=1;fontColor=#16324f;align=left;verticalAlign=top;spacingLeft=22;spacingTop=14;container=1;collapsible=0;" value="Layer 1 - Endpoint Agent Layer" vertex="1">
+          <mxGeometry height="200" width="1770" x="150" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="agent" parent="layer1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d08a27;fontFamily=Arial;fontSize=20;fontColor=#1f2937;align=center;verticalAlign=middle;strokeWidth=1.5;" value="&lt;b&gt;Nadan Agent&lt;/b&gt;" vertex="1">
+          <mxGeometry height="88.64864864864866" width="307.42105263157896" x="465.7894736842105" y="40.00027027027028" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-spine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16324f;strokeColor=#16324f;fontFamily=Arial;fontSize=22;fontStyle=1;fontColor=#ffffff;align=center;verticalAlign=middle;textDirection=vertical-rl;rotation=-180;" value="Primary Operational Flow" vertex="1">
+          <mxGeometry height="840" width="38" x="90" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Arial;fontSize=20;fontColor=#5b677a;" value="Layer order follows the endpoint-to-external path. Collection starts in Layer 1 and crosses controlled boundaries toward Layer 5." vertex="1">
+          <mxGeometry height="42" width="1120" x="150" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-bus-app" edge="1" parent="1" source="rabbit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#4b83c3;strokeWidth=2;fontFamily=Arial;fontSize=20;fontStyle=1;labelBackgroundColor=#ffffff;" target="svc-pub" value="AMQP boundary">
+          <mxGeometry relative="1" x="-0.1788" y="64" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1520" y="908" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-app-data" edge="1" parent="1" source="svc-compare" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#7b5bb6;strokeWidth=2;fontFamily=Arial;fontSize=20;fontStyle=1;labelBackgroundColor=#ffffff;" target="data-golden" value="read/write state">
+          <mxGeometry relative="1" x="0.2573" y="46" as="geometry">
+            <mxPoint x="3" y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-app-db" edge="1" parent="1" source="svc-api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#7b5bb6;strokeWidth=2;fontFamily=Arial;fontSize=20;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="data-db" value="inventory, &lt;br&gt;audit&lt;br&gt;, anomalies">
+          <mxGeometry relative="1" x="-0.4536" y="-55" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-orch-agent" edge="1" parent="1" source="svc-orch" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#d08a27;strokeWidth=2;fontFamily=Arial;fontSize=20;fontStyle=1;labelBackgroundColor=#ffffff;" target="agent" value="task and collect">
+          <mxGeometry relative="1" x="0.3893" y="-28" as="geometry">
+            <mxPoint x="20" y="8" as="offset" />
+            <Array as="points">
+              <mxPoint x="890" y="330" />
+              <mxPoint x="815" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-agent-assets" edge="1" parent="1" source="agent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;strokeColor=#d08a27;strokeWidth=2;fontFamily=Arial;fontSize=20;labelBackgroundColor=#ffffff;" value="monitors">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="224" />
+              <mxPoint x="1120" y="224" />
+            </Array>
+            <mxPoint x="1120" y="246" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,115 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="aluma_dfd_diagram" name="Aluma Internal DFD">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aluma_boundary" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#F5F5F5;strokeColor=#666666;dashed=1;verticalAlign=top;fontSize=16;spacingTop=10;fontColor=#333333;fontStyle=1" value="Aluma Data Flow Boundary" vertex="1">
+          <mxGeometry height="700" width="680" x="320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_sensor" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=16;fontColor=#333333;shadow=1;fontStyle=1" value="Sensors&#xa;(Sufa, Nadan, Nitzoz)" vertex="1">
+          <mxGeometry height="80" width="180" x="60" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_ui" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=16;fontColor=#333333;shadow=1;fontStyle=1" value="Administrator&#xa;UI" vertex="1">
+          <mxGeometry height="80" width="160" x="1080" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_siem" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=16;fontColor=#333333;shadow=1;fontStyle=1" value="External SIEM&#xa;(QRadar)" vertex="1">
+          <mxGeometry height="80" width="160" x="1080" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_ingest" parent="1" style="ellipse;whiteSpace=wrap;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=16;fontColor=#333333;shadow=1" value="1.0&#xa;Validate &amp; Ingest&#xa;Events" vertex="1">
+          <mxGeometry height="120" width="160" x="360" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_api" parent="1" style="ellipse;whiteSpace=wrap;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=16;fontColor=#333333;shadow=1" value="4.0&#xa;Serve UI &amp;&#xa;Manage Policy" vertex="1">
+          <mxGeometry height="120" width="160" x="800" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_correlate" parent="1" style="ellipse;whiteSpace=wrap;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=16;fontColor=#333333;shadow=1" value="2.0&#xa;Prefilter Rules&#xa;(Known bad pass filter, Known good reject filter)" vertex="1">
+          <mxGeometry height="120" width="160" x="580" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_rules" parent="1" style="shape=partialRectangle;whiteSpace=wrap;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=16;fontColor=#333333;shadow=1;top=0;bottom=0;" value="D1: Rules Store&#xa;(YAML/Memory)" vertex="1">
+          <mxGeometry height="60" width="160" x="580" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_state" parent="1" style="shape=partialRectangle;whiteSpace=wrap;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=16;fontColor=#333333;shadow=1;top=0;bottom=0;" value="D2: Events store" vertex="1">
+          <mxGeometry height="60" width="160" x="360" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_incidents" parent="1" style="shape=partialRectangle;whiteSpace=wrap;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=16;fontColor=#333333;shadow=1;top=0;bottom=0;" value="D3: Incidents DB" vertex="1">
+          <mxGeometry height="60" width="160" x="800" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="f_sensor_ingest" edge="1" parent="1" source="ext_sensor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="proc_ingest" value="Raw Event&#xa;(JSON)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_ingest_correlate" edge="1" parent="1" source="proc_ingest" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.25;" target="proc_correlate" value="Validated Event">
+          <mxGeometry relative="1" x="-0.574" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="440" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_ui_api" edge="1" parent="1" source="ext_ui" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0;exitY=0.25;entryX=1;entryY=0.25;" target="proc_api" value="Policy Update">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_api_ui" edge="1" parent="1" source="proc_api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=1;exitY=0.75;entryX=0;entryY=0.75;" target="ext_ui" value="Incident View">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_api_rules" edge="1" parent="1" source="proc_api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="ds_rules" value="Rules &lt;br&gt;Config">
+          <mxGeometry relative="1" x="-0.3326" y="-40" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="790" y="280" />
+              <mxPoint x="790" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_rules_correlate" edge="1" parent="1" source="ds_rules" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="proc_correlate" value="Rule Config">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_correlate_state" edge="1" parent="1" source="mSm7E88dhPSdzaQ-wos_-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0;exitY=0;entryX=1;entryY=0.5;exitDx=0;exitDy=0;" target="ds_state" value="Current event">
+          <mxGeometry relative="1" x="-0.3193" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="593" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_state_correlate" edge="1" parent="1" source="ds_state" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=1;exitY=0.75;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mSm7E88dhPSdzaQ-wos_-3" value="Past Events">
+          <mxGeometry relative="1" x="0.4737" y="-27" as="geometry">
+            <mxPoint x="-25" y="-17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_correlate_incidents" edge="1" parent="1" source="mSm7E88dhPSdzaQ-wos_-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" target="ds_incidents" value="Correlated&#xa;Incident">
+          <mxGeometry relative="1" x="0.6667" y="60" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_incidents_api" edge="1" parent="1" source="ds_incidents" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="proc_api" value="Incident Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_correlate_siem" edge="1" parent="1" source="mSm7E88dhPSdzaQ-wos_-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=1;exitY=1;entryX=0;entryY=0.5;exitDx=0;exitDy=0;" target="ext_siem" value="Critical Incident&lt;br&gt;Syslog&amp;nbsp;">
+          <mxGeometry relative="1" x="-0.5248" y="12" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mSm7E88dhPSdzaQ-wos_-1" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=16;fontColor=#333333;shadow=1;fontStyle=1" value="QRadar&#xa;output" vertex="1">
+          <mxGeometry height="80" width="180" x="60" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="mSm7E88dhPSdzaQ-wos_-2" edge="1" parent="1" source="mSm7E88dhPSdzaQ-wos_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="proc_ingest" value="syslog qrdr&lt;br&gt;&amp;nbsp;events">
+          <mxGeometry relative="1" x="-0.526" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="300" y="420" as="sourcePoint" />
+            <mxPoint x="420" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mSm7E88dhPSdzaQ-wos_-3" parent="1" style="ellipse;whiteSpace=wrap;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=16;fontColor=#333333;shadow=1" value="3.0&#xa;Correlation Engine" vertex="1">
+          <mxGeometry height="120" width="160" x="570" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="mSm7E88dhPSdzaQ-wos_-4" edge="1" parent="1" source="proc_correlate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#333333;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="mSm7E88dhPSdzaQ-wos_-3" value="Filtered Event">
+          <mxGeometry relative="1" x="0.125" y="-18" as="geometry">
+            <mxPoint x="8" y="-15" as="offset" />
+            <mxPoint x="770" y="600" as="sourcePoint" />
+            <mxPoint x="838" y="713" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
